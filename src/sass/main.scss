@@ -1,0 +1,58 @@
+@import 'minireset';
+@import 'normalize.scss';
+@import 'fonts';
+@import 'vars.scss';
+@import 'mixins.scss';
+
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  @include font($font-main, 1.4rem, 400);
+  line-height: 1.7;
+  color: $text-color;
+}
+
+.container {
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main__section {
+  padding-top: 9.8rem;
+  padding-bottom: 9.8rem;
+}
+
+.section-title {
+  @include font($font-main, 2rem, 400);
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.section-title::after {
+  display: block;
+  content: '';
+  width: 5rem;
+  height: 0.2rem;
+  background-color: $text-color;
+  margin: 2.8rem auto 0 auto;
+}
+
+.section-description {
+  @include font($font, 1.6rem, 400);
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 7.2rem;
+}
+
+@import 'header';
+@import 'services';
+@import 'about';
+@import 'contact';
+@import 'footer';
+@import 'media';

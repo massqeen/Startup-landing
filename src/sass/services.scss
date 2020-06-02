@@ -1,0 +1,50 @@
+.services {
+  // .services__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  // .services__list-item
+
+  &__list-item {
+    flex-basis: 33.3%;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 8.6rem;
+      height: 8.6rem;
+      border: 2px solid #ddd;
+      border-radius: 50%;
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  // .services__list-item-title
+
+  &__item-title {
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+  }
+
+  // .services__list-item-description
+
+  &__item-description {
+    @include font($font, 1.4rem, 400)
+  }
+}
+
+.services-icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  fill: $accent-color;
+}
