@@ -5,6 +5,41 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    &-icon-wrapper {
+      display: flex;
+      content: '';
+      align-items: center;
+      justify-content: center;
+      width: 8.6rem;
+      height: 8.6rem;
+      border: 2px solid #ddd;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 2.6rem;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &-icon {
+      fill: $accent-color;
+      transition: fill 0.3s ease-in-out;
+
+      //задаем размеры иконкам
+      &--font {
+        width: 4.3rem;
+        height: 4rem;
+      }
+
+      &--code {
+        width: 5.3rem;
+        height: 4rem;
+      }
+
+      &--support {
+        width: 4.8rem;
+        height: 4.9rem;
+      }
+    }
   }
 
   // .services__list-item
@@ -15,17 +50,12 @@
     padding: 0 1rem;
     margin-bottom: 3rem;
 
-    &::before {
-      display: block;
-      content: '';
-      width: 8.6rem;
-      height: 8.6rem;
-      border: 2px solid #ddd;
-      border-radius: 50%;
-      margin: 0 auto;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-bottom: 2.6rem;
+    &:hover .services__list-icon-wrapper {
+      background-color: $accent-color;
+    }
+
+    &:hover .services__list-icon {
+      fill: #fff;
     }
   }
 
@@ -39,12 +69,6 @@
   // .services__list-item-description
 
   &__item-description {
-    @include font($font, 1.4rem, 400)
+    @include font($font, 1.4rem, 400);
   }
-}
-
-.services-icon {
-  width: 4.8rem;
-  height: 4.8rem;
-  fill: $accent-color;
 }

@@ -4,9 +4,13 @@
 @import 'vars.scss';
 @import 'mixins.scss';
 
-
 :root {
   font-size: 62.5%;
+}
+
+//убираем верхний марджин h1, прописанный в нормалайзе
+h1 {
+  margin-top: 0;
 }
 
 body {
